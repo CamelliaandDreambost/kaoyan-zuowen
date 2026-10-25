@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>考研英语二 · 大作文分板块速查</title>
+<style>
+  :root{
+    --brand:#4f46e5;
+    --brand2:#7c3aed;
+    --ink:#1f2937;
+    --sub:#6b7280;
+    --line:#e8eaf0;
+    --bg:#f4f5f9;
+    --card:#ffffff;
+    --en-bg:#f1f5ff;
+    --en-border:#c7d2fe;
+    --gold:#f59e0b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.7;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:640px;margin:0 auto;padding-bottom:80px;}
+
+  /* ===== 头部 ===== */
+  header{
+    background:linear-gradient(135deg,var(--brand) 0%,var(--brand2) 100%);
+    color:#fff;
+    padding:26px 20px 20px;
+    position:relative;
+    overflow:hidden;
+  }
+  header::after{
+    content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;
+    background:rgba(255,255,255,.10);border-radius:50%;
+  }
+  header::before{
+    content:"";position:absolute;right:40px;bottom:-60px;width:140px;height:140px;
+    background:rgba(255,255,255,.08);border-radius:50%;
+  }
+  header .tag{
+    display:inline-block;font-size:12px;letter-spacing:1px;
+    background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+    padding:3px 10px;border-radius:999px;margin-bottom:10px;
+  }
+  header h1{font-size:24px;font-weight:700;letter-spacing:.5px;}
+  header p{font-size:13px;opacity:.9;margin-top:6px;}
+  header .xlink{display:inline-block;margin-top:12px;font-size:13px;color:#fff;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.42);padding:5px 12px;border-radius:999px;text-decoration:none;}
+  header .xlink:active{opacity:.75;}
+
+  /* ===== 板块导航 ===== */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.92);backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    box-shadow:0 2px 10px rgba(0,0,0,.04);
+  }
+  nav .chips{
+    display:flex;gap:8px;overflow-x:auto;padding:10px 12px;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  nav .chips::-webkit-scrollbar{display:none;}
+  .chip{
+    flex:0 0 auto;white-space:nowrap;
+    font-size:13px;color:var(--sub);
+    background:#eef0f6;border:1px solid transparent;
+    padding:6px 13px;border-radius:999px;cursor:pointer;user-select:none;
+    transition:.15s;
+  }
+  .chip.active{
+    color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand2));
+    font-weight:600;border-color:transparent;
+  }
+
+  /* ===== 工具栏 ===== */
+  .toolbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:12px 16px 4px;
+  }
+  .toolbar .hint{font-size:12px;color:var(--sub);}
+  .toolbar button{
+    font-size:13px;color:var(--brand);background:#eef0ff;
+    border:1px solid var(--en-border);border-radius:999px;
+    padding:6px 14px;cursor:pointer;
+  }
+  .toolbar button:active{opacity:.7;}
+
+  /* ===== 卡片 ===== */
+  details.card{
+    background:var(--card);border-radius:16px;
+    margin:12px 12px 0;overflow:hidden;
+    box-shadow:0 1px 3px rgba(16,24,40,.05);
+  }
+  details.card > summary{
+    list-style:none;cursor:pointer;
+    display:flex;align-items:center;gap:12px;
+    padding:16px 16px;
+  }
+  details.card > summary::-webkit-details-marker{display:none;}
+  .num{
+    flex:0 0 auto;width:34px;height:34px;border-radius:10px;
+    background:linear-gradient(135deg,var(--brand),var(--brand2));
+    color:#fff;font-weight:700;font-size:15px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .titles{flex:1;min-width:0;}
+  .titles h2{font-size:17px;font-weight:700;line-height:1.3;}
+  .titles .sub{font-size:12px;color:var(--sub);margin-top:2px;}
+  .arrow{
+    flex:0 0 auto;width:20px;height:20px;color:#9ca3af;
+    transition:transform .2s;
+  }
+  details.card[open] > summary .arrow{transform:rotate(180deg);}
+
+  .body{padding:0 16px 18px;border-top:1px solid var(--line);}
+  .body > .inner{padding-top:14px;}
+
+  /* ===== 内容元素 ===== */
+  .grp{margin-bottom:16px;}
+  .grp:last-child{margin-bottom:0;}
+  .grp-title{
+    font-size:15px;font-weight:700;color:var(--brand);
+    display:flex;align-items:center;gap:7px;margin-bottom:8px;
+  }
+  .grp-title::before{
+    content:"";width:4px;height:15px;border-radius:2px;
+    background:linear-gradient(180deg,var(--brand),var(--brand2));flex:0 0 auto;
+  }
+  ul.items{list-style:none;}
+  ul.items li{
+    position:relative;padding:6px 0 6px 20px;
+    border-bottom:1px dashed #eef0f6;font-size:15px;
+  }
+  ul.items li:last-child{border-bottom:none;}
+  ul.items li::before{
+    content:"";position:absolute;left:4px;top:15px;
+    width:6px;height:6px;border-radius:50%;background:var(--brand2);
+  }
+  ul.items li b{color:var(--ink);}
+  ul.items li .zh{color:var(--ink);}
+  ul.items li .en{color:#4c5fd5;font-weight:600;}
+
+  /* 子项（二级） */
+  ul.sub{padding-left:14px;margin-top:2px;list-style:none;}
+  ul.sub li{
+    position:relative;padding:4px 0 4px 16px;
+    border-bottom:none;font-size:14px;color:var(--sub);
+  }
+  ul.sub li::before{
+    content:"";position:absolute;left:2px;top:12px;
+    width:5px;height:5px;border-radius:1px;background:#cbd5e1;
+  }
+
+  /* 英文例句块 */
+  .en-block{
+    background:var(--en-bg);border:1px solid var(--en-border);
+    border-left:3px solid var(--brand);border-radius:10px;
+    padding:11px 13px;margin:8px 0;font-size:14px;
+    color:#33415e;line-height:1.75;
+  }
+  .en-block .lbl{
+    display:block;font-size:11px;color:var(--brand);font-weight:700;
+    letter-spacing:1px;margin-bottom:3px;
+  }
+  .en-block .fill{color:#d97706;font-weight:600;}
+  .en-block small{color:#8b93a7;}
+
+  /* 评分标准条 */
+  .score-item{
+    display:flex;gap:10px;align-items:flex-start;padding:9px 0;
+    border-bottom:1px dashed #eef0f6;font-size:15px;
+  }
+  .score-item:last-child{border-bottom:none;}
+  .score-item .dot{
+    flex:0 0 auto;width:22px;height:22px;border-radius:50%;
+    background:#fff7ed;color:var(--gold);border:1px solid #fcd9a0;
+    font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;
+    margin-top:2px;
+  }
+
+  /* 思路卡片 */
+  .idea{
+    border:1px solid var(--line);border-radius:12px;padding:11px 13px;margin-bottom:10px;
+    background:#fafbff;
+  }
+  .idea:last-child{margin-bottom:0;}
+  .idea .idea-head{
+    display:flex;align-items:center;gap:8px;margin-bottom:6px;
+  }
+  .idea .idea-head .idx{
+    flex:0 0 auto;min-width:22px;height:22px;padding:0 5px;border-radius:7px;
+    background:linear-gradient(135deg,var(--brand),var(--brand2));
+    color:#fff;font-size:12px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .idea .idea-head .name{font-size:15px;font-weight:700;}
+  .idea .idea-head .alias{font-size:12px;color:var(--sub);}
+
+  .callout{
+    background:#fff8ec;border:1px solid #fde3b5;border-radius:10px;
+    padding:11px 13px;font-size:14px;color:#92400e;margin:8px 0;
+  }
+
+  /* 段落结构 */
+  .para{
+    border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden;
+  }
+  .para:last-child{margin-bottom:0;}
+  .para .para-head{
+    background:linear-gradient(135deg,#eef2ff,#f5f3ff);
+    padding:9px 13px;font-size:15px;font-weight:700;color:var(--brand);
+    display:flex;align-items:center;gap:8px;
+  }
+  .para .para-body{padding:11px 13px;}
+  .step{display:flex;gap:10px;padding:7px 0;align-items:flex-start;}
+  .step .k{
+    flex:0 0 auto;font-size:13px;font-weight:700;color:var(--brand);
+    background:#eef0ff;border-radius:6px;padding:2px 8px;margin-top:1px;
+  }
+  .step .v{font-size:14.5px;flex:1;}
+
+  /* 浮动按钮 */
+  .fab{
+    position:fixed;right:16px;bottom:28px;z-index:60;
+    width:46px;height:46px;border-radius:50%;
+    background:linear-gradient(135deg,var(--brand),var(--brand2));
+    color:#fff;border:none;box-shadow:0 6px 18px rgba(79,70,229,.4);
+    font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  }
+  .fab:active{opacity:.8;}
+
+  footer{
+    text-align:center;color:#9ca3af;font-size:12px;padding:24px 16px 8px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <span class="tag">英语二 · 写作</span>
+  <h1>考研英语（二）大作文</h1>
+  <p>思维导图分板块速查 · 图表/图画 · 结构模板 · 小作文信件 · 十大思路</p>
+  <a class="xlink" href="xiaozuowen.html">小作文模板 →</a>
+</header>
+
+<nav>
+  <div class="chips" id="chips"></div>
+</nav>
+
+<div class="toolbar">
+  <span class="hint">共 7 个板块，点击板块标题展开</span>
+  <button id="toggleAll">展开全部</button>
+</div>
+
+<main class="wrap" id="main">
+
+  <!-- ================= 板块一 ================= -->
+  <details class="card" id="sec1" open>
+    <summary>
+      <span class="num">1</span>
+      <div class="titles"><h2>考哪些作文</h2><span class="sub">题型 · 图表 / 图画 / 话题 / 议论文</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <div class="grp">
+        <div class="grp-title">图表作文</div>
+        <ul class="items">
+          <li>折线图 <span class="en">line graph</span></li>
+          <li>柱状图 <span class="en">column / bar chart</span></li>
+          <li>饼状图 <span class="en">pie chart</span></li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp-title">图画作文</div>
+        <ul class="items">
+          <li>社会话题</li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp-title">话题类作文</div>
+        <ul class="items">
+          <li>话题讨论</li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp-title">议论文</div>
+        <ul class="items">
+          <li>就某一观点/现象展开论述</li>
+        </ul>
+      </div>
+    </div></div>
+  </details>
+
+  <!-- ================= 板块二 ================= -->
+  <details class="card" id="sec2">
+    <summary>
+      <span class="num">2</span>
+      <div class="titles"><h2>必要词汇补充</h2><span class="sub">图表 / 图画 · 描述 · 反映</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <div class="grp">
+        <div class="grp-title">图表类词汇</div>
+        <ul class="items">
+          <li>柱状图 <span class="en">column</span></li>
+          <li>饼状图 <span class="en">pie chart</span></li>
+          <li>折线图 <span class="en">line graph</span></li>
+          <li>图表/示意图 <span class="en">diagram</span></li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp-title">图画类词汇</div>
+        <ul class="items">
+          <li>图片 <span class="en">image</span></li>
+          <li>漫画 <span class="en">cartoon</span></li>
+          <li>图画 <span class="en">drawing</span></li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp-title">描绘 / 描述</div>
+        <ul class="items">
+          <li><span class="en">portrayed</span> · 描绘</li>
+          <li><span class="en">depicted</span> · 描述</li>
+        </ul>
+        <div class="en-block">
+          <span class="lbl">例句</span>
+          As is subtly mirrored in the pie chart that + 图画描述.
+        </div>
+      </div>
+      <div class="grp">
+        <div class="grp-title">反映 / 说明</div>
+        <ul class="items">
+          <li><span class="en">demonstrate</span> · 证明、显示</li>
+          <li><span class="en">illustrate</span> · 说明、阐明</li>
+          <li><span class="en">reflect</span> · 反映</li>
+        </ul>
+      </div>
+    </div></div>
+  </details>
+
+  <!-- ================= 板块三 ================= -->
+  <details class="card" id="sec3">
+    <summary>
+      <span class="num">3</span>
+      <div class="titles"><h2>段落结构模板</h2><span class="sub">第一段描述 · 第二段论述 · 第三段总结</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+
+      <div class="para">
+        <div class="para-head">第一段 · 描述图片 / 现象</div>
+        <div class="para-body">
+          <div class="step"><span class="k">开头句</span><div class="v">
+            <div class="en-block" style="margin:0">
+              As is subtly mirrored in the image, <span class="fill">图画描述</span>.
+            </div>
+          </div></div>
+          <div class="step"><span class="k">描述要素</span><div class="v">
+            人物 / 动物 / 事物 + 动作 + 环境（图画）　或　主题 + 对象 + 时间
+          </div></div>
+          <div class="step"><span class="k">占比表达</span><div class="v"><span class="en">account for</span>（占……比例）</div></div>
+          <div class="step"><span class="k">描述现象</span><div class="v">
+            <div class="en-block" style="margin:0">
+              What the diagram conveys goes far beyond merely <span class="fill">______</span>. Instead, it <span class="fill">______</span>.
+            </div>
+          </div></div>
+          <div class="step"><span class="k">过渡句</span><div class="v">
+            <div class="en-block" style="margin:0">
+              Several factors weigh heavily for this round of economic recession, among which two major ones suspended on the top of the list which should never be overlooked.
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="para">
+        <div class="para-head">饼状图 · 完整例句</div>
+        <div class="para-body">
+          <div class="en-block" style="margin:0">
+            As is subtly mirrored in the pie chart, factors, which influenced consumer's choices when going to the restaurants, varied a lot.
+          </div>
+          <div class="en-block" style="margin-top:8px">
+            Based on the diagram given, people who choose the restaurants with the preference of special features take a comparatively large share, accounting for 37%, followed by those who prefer the service, a proportion of 33%. By contrast, the percentage of consumers who put emphasis on environment, price and other accounts for 9%, 6% and 15% respectively.
+          </div>
+        </div>
+      </div>
+
+      <div class="para">
+        <div class="para-head">第二段 · 论述（论点 + 论据）</div>
+        <div class="para-body">
+          <div class="step"><span class="k">论点句1</span><div class="v">
+            <div class="en-block" style="margin:0">In the first place, <span class="fill">______</span></div>
+          </div></div>
+          <div class="step"><span class="k">论据1</span><div class="v">
+            <div class="en-block" style="margin:0">
+              Based on a most recent study, a growing body of evidence showed that most successful social elites, who <span class="fill">______</span>, hold themselves accountable.
+            </div>
+          </div></div>
+          <div class="step"><span class="k">论点2</span><div class="v">
+            <div class="en-block" style="margin:0">Meanwhile, <span class="fill">观点句2</span></div>
+            <div class="en-block" style="margin-top:8px">
+              As a consequence, the group leader needs to spend more time and energy on group affairs than others.
+            </div>
+          </div></div>
+          <div class="step"><span class="k">论据2</span><div class="v">
+            <div class="en-block" style="margin:0">A classic case in point is one of my classmates, who <span class="fill">______</span>.</div>
+          </div></div>
+          <div class="step"><span class="k">小结句</span><div class="v">
+            <div class="en-block" style="margin:0">
+              Thus, from this standing point, there is nothing more beneficial and challenging than <span class="fill">______</span>. <small>(detrimental and harmful)</small>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="para">
+        <div class="para-head">第三段 · 总结</div>
+        <div class="para-body">
+          <div class="en-block" style="margin:0">
+            In view of the arguments above, we can safely draw a conclusion that with the ever-increasing material and cultural life, the number of university students touring will keep growing in the forthcoming decade.
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">💡 其中 <b>「论点句 + 论据」</b>与<b>「小结句」</b>的句式可以互相替换使用。</div>
+    </div></div>
+  </details>
+
+  <!-- ================= 板块四 ================= -->
+  <details class="card" id="sec4">
+    <summary>
+      <span class="num">4</span>
+      <div class="titles"><h2>如何提升</h2><span class="sub">背范文 + 大量练习</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <ul class="items">
+        <li>背一篇模板范文，做到<b>滚瓜烂熟</b></li>
+        <li>至少完成 <b>8 篇练习</b></li>
+      </ul>
+    </div></div>
+  </details>
+
+  <!-- ================= 板块五 ================= -->
+  <details class="card" id="sec5">
+    <summary>
+      <span class="num">5</span>
+      <div class="titles"><h2>考研大纲评分标准</h2><span class="sub">四项核心要求</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <div class="score-item"><span class="dot">1</span><span>包含所有内容要点。</span></div>
+      <div class="score-item"><span class="dot">2</span><span>丰富的结构和词汇。</span></div>
+      <div class="score-item"><span class="dot">3</span><span>多种衔接手法，文字连贯，结构清晰。</span></div>
+      <div class="score-item"><span class="dot">4</span><span>格式与语域恰当。</span></div>
+    </div></div>
+  </details>
+
+  <!-- ================= 板块六 ================= -->
+  <details class="card" id="sec6">
+    <summary>
+      <span class="num">6</span>
+      <div class="titles"><h2>小作文 · 信件</h2><span class="sub">格式 · 语言 · 模板 · 范文</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <div class="grp">
+        <div class="grp-title">格式（信件结构）</div>
+        <ul class="items">
+          <li><b>称呼</b></li>
+          <li><b>第一段</b>
+            <ul class="sub">
+              <li>问候语（客套问候）</li>
+              <li>写信目的</li>
+            </ul>
+          </li>
+          <li><b>第二段</b>
+            <ul class="sub">
+              <li>按题目要求添加细节</li>
+              <li>一般三个点</li>
+            </ul>
+          </li>
+          <li><b>客套结束</b></li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp-title">语言</div>
+        <ul class="items">
+          <li>长短句结合（一长一短）</li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp-title">模板 &amp; 范文</div>
+        <ul class="items">
+          <li>准备<b>模板</b> + <b>范文</b></li>
+        </ul>
+      </div>
+    </div></div>
+  </details>
+
+  <!-- ================= 板块七 ================= -->
+  <details class="card" id="sec7">
+    <summary>
+      <span class="num">7</span>
+      <div class="titles"><h2>十条拓宽思路的点</h2><span class="sub">写论点时套用 · 十大角度</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+
+      <div class="idea">
+        <div class="idea-head"><span class="idx">1</span><span class="name">理论联系实际</span></div>
+        <div class="en-block" style="margin:0">
+          when visiting places full of knowledge and culture, our horizon can be broadened, as practical experience can be a great supplement for our book knowledge.
+        </div>
+      </div>
+
+      <div class="idea">
+        <div class="idea-head"><span class="idx">2</span><span class="name">经济</span><span class="alias">随着中国经济的崛起</span></div>
+        <div class="en-block" style="margin:0">
+          owing to the prosperity of the economy in China, the whole country promotes the policy of higher education.
+        </div>
+      </div>
+
+      <div class="idea">
+        <div class="idea-head"><span class="idx">3</span><span class="name">效率</span></div>
+        <div class="en-block" style="margin:0">
+          due to the busy schedule of university life, college students, who are engaged in studying, must find it helpful for them to improve efficiency when reading on the smart phone.
+        </div>
+      </div>
+
+      <div class="idea">
+        <div class="idea-head"><span class="idx">4</span><span class="name">安全</span></div>
+        <div class="en-block" style="margin:0">
+          doing sth provides a safer environment for both your life and your career.
+        </div>
+      </div>
+
+      <div class="idea">
+        <div class="idea-head"><span class="idx">5</span><span class="name">健康</span><span class="alias">减少压力</span></div>
+        <div class="en-block" style="margin:0">
+          Due to the busy schedule of university life, college students who are engaged in studying, dating and participating in other activities, are especially susceptible to omnipresent stress. <small>(论点2)</small> Via (by) travelling, their long standing pressure can be effectively reduced.
+        </div>
+      </div>
+
+      <div class="idea">
+        <div class="idea-head"><span class="idx">6</span><span class="name">交流</span></div>
+        <div class="en-block" style="margin:0">
+          During/when modeling the educational behavior, the communication between generations can be enhanced.
+        </div>
+      </div>
+
+      <div class="idea">
+        <div class="idea-head"><span class="idx">7</span><span class="name">情感</span></div>
+        <div class="en-block" style="margin:0">
+          emotional factors do play an important role in cultivating children's behavior. When doing sth, the positive emotion, which is helpful for education, can be triggered.
+        </div>
+      </div>
+
+      <div class="idea">
+        <div class="idea-head"><span class="idx">8</span><span class="name">环保</span></div>
+        <div class="en-block" style="margin:0">
+          as the increasing awareness of resources, more and more people start to realize that it is more environmentally friendly to use the express service.
+        </div>
+      </div>
+
+      <div class="idea">
+        <div class="idea-head"><span class="idx">9</span><span class="name">乐趣</span></div>
+        <div class="en-block" style="margin:0">
+          our interests can be satisfied during advanced education.
+        </div>
+      </div>
+
+      <div class="idea">
+        <div class="idea-head"><span class="idx">10</span><span class="name">国家 → 社会</span></div>
+        <div class="callout" style="margin:0">从国家、社会层面切入，拔高立意（图中未给出固定英文句，写作时可按主题自行补充）。</div>
+      </div>
+
+    </div></div>
+  </details>
+
+  <footer>由《考研英语2大作文脑图（A3 打印版）》整理 · 仅供复习使用</footer>
+</main>
+
+<button class="fab" id="fab" title="返回顶部">↑</button>
+
+<script>
+(function(){
+  var sections = document.querySelectorAll('details.card');
+  var chips = document.getElementById('chips');
+  var toggleAll = document.getElementById('toggleAll');
+  var fab = document.getElementById('fab');
+  var expanded = false;
+
+  // 生成导航 chip
+  var names = ['考哪些作文','词汇补充','段落模板','如何提升','评分标准','小作文','十大思路'];
+  sections.forEach(function(sec, i){
+    var c = document.createElement('span');
+    c.className = 'chip';
+    c.textContent = (i+1) + '. ' + names[i];
+    c.addEventListener('click', function(){
+      sec.open = true;
+      sec.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+    chips.appendChild(c);
+  });
+
+  // 展开/收起全部
+  toggleAll.addEventListener('click', function(){
+    expanded = !expanded;
+    sections.forEach(function(s){ s.open = expanded; });
+    toggleAll.textContent = expanded ? '收起全部' : '展开全部';
+  });
+
+  // 返回顶部
+  fab.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+  window.addEventListener('scroll', function(){
+    fab.style.display = window.scrollY > 500 ? 'flex' : 'none';
+  });
+  fab.style.display = 'none';
+
+  // 滚动时高亮当前板块
+  var chipEls = Array.prototype.slice.call(chips.children);
+  function spy(){
+    var pos = window.scrollY + 120;
+    var idx = 0;
+    sections.forEach(function(s, i){
+      if (s.offsetTop <= pos) idx = i;
+    });
+    chipEls.forEach(function(c, i){
+      c.classList.toggle('active', i === idx);
+    });
+  }
+  window.addEventListener('scroll', spy);
+  spy();
+})();
+</script>
+</body>
+</html>
