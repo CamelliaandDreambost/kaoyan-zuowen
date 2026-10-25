@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>考研英语二 · 小作文模板</title>
+<style>
+  :root{
+    --brand:#0d9488;
+    --brand2:#10b981;
+    --ink:#1f2937;
+    --sub:#6b7280;
+    --line:#e5e7eb;
+    --bg:#f4f6f5;
+    --card:#ffffff;
+    --en-bg:#f0fdfa;
+    --en-border:#99f6e4;
+    --gold:#f59e0b;
+    --note:#d97706;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.7;font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:640px;margin:0 auto;padding-bottom:80px;}
+
+  /* 头部 */
+  header{
+    background:linear-gradient(135deg,#0f766e 0%,#0d9488 50%,#10b981 100%);
+    color:#fff;padding:26px 20px 20px;position:relative;overflow:hidden;
+  }
+  header::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;background:rgba(255,255,255,.10);border-radius:50%;}
+  header::before{content:"";position:absolute;right:40px;bottom:-60px;width:140px;height:140px;background:rgba(255,255,255,.08);border-radius:50%;}
+  header .tag{display:inline-block;font-size:12px;letter-spacing:1px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:3px 10px;border-radius:999px;margin-bottom:10px;}
+  header h1{font-size:24px;font-weight:700;letter-spacing:.5px;}
+  header p{font-size:13px;opacity:.92;margin-top:6px;}
+  header .xlink{display:inline-block;margin-top:12px;font-size:13px;color:#fff;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.42);padding:5px 12px;border-radius:999px;text-decoration:none;}
+  header .xlink:active{opacity:.75;}
+
+  /* 导航 */
+  nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(0,0,0,.04);}
+  nav .chips{display:flex;gap:8px;overflow-x:auto;padding:10px 12px;scrollbar-width:none;-ms-overflow-style:none;}
+  nav .chips::-webkit-scrollbar{display:none;}
+  .chip{flex:0 0 auto;white-space:nowrap;font-size:13px;color:var(--sub);background:#eef0f6;border:1px solid transparent;padding:6px 13px;border-radius:999px;cursor:pointer;user-select:none;transition:.15s;}
+  .chip.active{color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand2));font-weight:600;}
+
+  .toolbar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px 4px;}
+  .toolbar .hint{font-size:12px;color:var(--sub);}
+  .toolbar button{font-size:13px;color:var(--brand);background:#ecfdf5;border:1px solid #a7f3d0;border-radius:999px;padding:6px 14px;cursor:pointer;}
+  .toolbar button:active{opacity:.7;}
+
+  /* 卡片 */
+  details.card{background:var(--card);border-radius:16px;margin:12px 12px 0;overflow:hidden;box-shadow:0 1px 3px rgba(16,24,40,.05);}
+  details.card > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:16px 16px;}
+  details.card > summary::-webkit-details-marker{display:none;}
+  .num{flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;}
+  .titles{flex:1;min-width:0;}
+  .titles h2{font-size:17px;font-weight:700;line-height:1.3;}
+  .titles .sub{font-size:12px;color:var(--sub);margin-top:2px;}
+  .arrow{flex:0 0 auto;width:20px;height:20px;color:#9ca3af;transition:transform .2s;}
+  details.card[open] > summary .arrow{transform:rotate(180deg);}
+
+  .body{padding:0 16px 18px;border-top:1px solid var(--line);}
+  .body > .inner{padding-top:14px;}
+
+  /* 信件模板 */
+  .letter{background:var(--en-bg);border:1px solid var(--en-border);border-left:3px solid var(--brand);border-radius:12px;padding:14px 14px;font-size:14.5px;color:#134e4a;line-height:1.85;}
+  .letter p{margin:0 0 10px;}
+  .letter p:last-child{margin-bottom:0;}
+  .letter .salute{font-weight:700;margin-bottom:10px;}
+  .letter .closing{margin-top:10px;font-weight:600;line-height:1.5;}
+  .note{color:var(--note);font-size:12.5px;background:#fff7ed;border:1px solid #fed7aa;border-radius:5px;padding:0 4px;white-space:nowrap;}
+  .fill{color:#b45309;font-weight:700;}
+
+  /* 中文翻译 */
+  details.trans{margin-top:12px;background:#fafafa;border:1px dashed #d1d5db;border-radius:10px;overflow:hidden;}
+  details.trans > summary{list-style:none;cursor:pointer;padding:10px 13px;font-size:13.5px;font-weight:600;color:var(--brand);display:flex;align-items:center;gap:6px;user-select:none;}
+  details.trans > summary::-webkit-details-marker{display:none;}
+  details.trans > summary::before{content:"译";font-size:11px;background:var(--brand);color:#fff;border-radius:4px;padding:0 5px;font-weight:700;}
+  details.trans > summary .tr-arrow{margin-left:auto;color:#9ca3af;transition:transform .2s;font-size:12px;}
+  details.trans[open] > summary .tr-arrow{transform:rotate(180deg);}
+  .trans-body{padding:4px 13px 13px;font-size:14px;color:#4b5563;line-height:1.85;border-top:1px solid #f0f0f0;}
+  .trans-body p{margin:0 0 10px;}
+  .trans-body p:last-child{margin-bottom:0;}
+
+  /* 说明块 */
+  .callout{background:#fff8ec;border:1px solid #fde3b5;border-radius:10px;padding:11px 13px;font-size:14px;color:#92400e;margin:8px 0;}
+  .steps{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px;font-size:14px;margin-bottom:12px;}
+  .steps ol{padding-left:20px;margin:6px 0 0;}
+  .steps li{margin:3px 0;}
+
+  .fab{position:fixed;right:16px;bottom:28px;z-index:60;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border:none;box-shadow:0 6px 18px rgba(13,148,136,.4);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+  .fab:active{opacity:.8;}
+
+  footer{text-align:center;color:#9ca3af;font-size:12px;padding:24px 16px 8px;}
+  footer .cheer{font-size:14px;color:var(--brand);font-weight:700;margin-bottom:6px;}
+</style>
+</head>
+<body>
+<header>
+  <span class="tag">英语二 · 写作</span>
+  <h1>考研英语（二）小作文模板</h1>
+  <p>11 种书信 / 通知 / 纪要模板 · 英文模板 + 中文对照 + 填空提示</p>
+  <a class="xlink" href="index.html">← 大作文思维导图</a>
+</header>
+
+<nav><div class="chips" id="chips"></div></nav>
+
+<div class="toolbar">
+  <span class="hint">共 11 个模板，点标题展开</span>
+  <button id="toggleAll">展开全部</button>
+</div>
+
+<main class="wrap" id="main">
+
+  <!-- 1 感谢信 -->
+  <details class="card" id="x1" open>
+    <summary>
+      <span class="num">1</span>
+      <div class="titles"><h2>感谢信</h2><span class="sub">Thank-you Letter</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <div class="letter">
+        <div class="salute">Dear Sir/Madam,</div>
+        <p>I am penning this letter to present my sincere thanks to you for your generous aid and assistance. Downside cannot be changed into upside, absence of your timely assistance.</p>
+        <p>Firstly, I will remember how kind and helpful you are all my life. Besides, considering problem-solving skills I have learned from you, I am confident that my future study and life would go much more smoothly. Finally, I will appreciate it if I can have a chance to repay your favor. <span class="note">最后一句如考题有要求写具体方案，需适当改写</span></p>
+        <p>It's difficult to find a proper word to describe my sincere thanks to you for lending me a hand. I am looking forward to receiving your return.</p>
+        <div class="closing">Yours sincerely,<br>Li Ming</div>
+      </div>
+      <details class="trans"><summary>中文翻译<span class="tr-arrow">▼</span></summary><div class="trans-body">
+        <p>我写这封信，是为了向你的慷慨相助表达我诚挚的感谢。没有你的及时帮助，就不会有我的否极泰来。</p>
+        <p>首先，我会一直记住你的乐于助人和善良。此外，一想到从你那里学到的解决问题的技巧，我相信未来的学习和生活会更加顺利。最后，如果我有机会报答你的恩惠，我将不胜感激。</p>
+        <p>你向我伸出援手，我找不到合适的词来准确表达对你真诚地感谢。我期待着收到你的回信。</p>
+      </div></details>
+    </div></div>
+  </details>
+
+  <!-- 2 祝贺信 -->
+  <details class="card" id="x2">
+    <summary>
+      <span class="num">2</span>
+      <div class="titles"><h2>祝贺信</h2><span class="sub">Congratulation Letter</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <div class="letter">
+        <div class="salute">Dear Sir/Madam,</div>
+        <p>I can not describe how happy I am to know that you <span class="note">填值得祝贺的原因，要填简单句</span>. I congratulate you most heartily on what you have achieved. <span class="note">填值得祝贺的原因，填 that 引导的简单句</span> is a further and significant step to your final life goal. Such great achievements are rewarding for your constant efforts. Your industry proves that gains stem from pains, which deserves my following.</p>
+        <p>I would like to express my congratulations on your success again. I hope we can keep in touch with each other.</p>
+        <div class="closing">Yours sincerely,<br>Li Ming</div>
+      </div>
+      <details class="trans"><summary>中文翻译<span class="tr-arrow">▼</span></summary><div class="trans-body">
+        <p>当我知道你，我简直无法描述自己有多兴奋。我衷心祝贺你所取得的成就。</p>
+        <p><span class="fill">______</span>是实现你最终人生目标的重要步骤。这些巨大的成就是你不断努力的回报。你的勤奋证明了不劳不获这个道理，这值得我效仿。</p>
+        <p>我想再次恭喜你取得成功。我希望我们能与彼此保持联系。</p>
+      </div></details>
+    </div></div>
+  </details>
+
+  <!-- 3 道歉信和辞职信 -->
+  <details class="card" id="x3">
+    <summary>
+      <span class="num">3</span>
+      <div class="titles"><h2>道歉信 &amp; 辞职信</h2><span class="sub">Apology / Resignation Letter</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <div class="letter">
+        <div class="salute">Dear Sir/Madam,</div>
+        <p>I think that you may get the information that <span class="note">填写信目的，要用简单句</span> when you receive this letter. While explanation is in vain, it is still my duty to make everything clear to you now.</p>
+        <p>For one thing, <span class="note">填第一个道歉/辞职的个人原因，用 that 引导的简单句</span> was totally unexpected. On the other hand, <span class="note">填第二个让情况更糟的个人原因，用 that 引导的简单句</span> messed up things, which further depressed and upset me. By <span class="note">填解决方案，用动名词短语</span>, I can properly cope with this problem, but I need to get your approval first.</p>
+        <p>All words or phrases are not enough to render my regret. It will be pleasant if you can think from my stand and accept my apologies.</p>
+        <div class="closing">Yours sincerely,<br>Li Ming</div>
+      </div>
+      <details class="trans"><summary>中文翻译<span class="tr-arrow">▼</span></summary><div class="trans-body">
+        <p>当你收到这封信时，你将会得到<span class="fill">______</span>的信息。虽然解释目前的问题是徒劳的，但我现在仍有责任向你们说明一切。</p>
+        <p>一方面，<span class="fill">______</span>，这完全出乎意料。另一方面，<span class="fill">______</span>彻底把事情弄糟糕透了，这让我更加沮丧和烦恼。我可以通过<span class="fill">______</span>方案来妥善处理这个问题，但我需要先得到你的认可。</p>
+        <p>所有的话都不足以表达我的遗憾。如果你能以我的立场思考并接受我的道歉，那我会非常开心。</p>
+      </div></details>
+    </div></div>
+  </details>
+
+  <!-- 4 建议信 -->
+  <details class="card" id="x4">
+    <summary>
+      <span class="num">4</span>
+      <div class="titles"><h2>建议信</h2><span class="sub">Suggestion Letter</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <div class="letter">
+        <div class="salute">Dear Sir/Madam,</div>
+        <p>In the last three years, I have majored in applied physics at University of Toronto. I am composing to express my views concerning <span class="note">填建议的主题，用动名词或名词词组</span>.</p>
+        <p>My arguments mainly include the two sections. First and most important, <span class="note">填第一个具体的建议，用简单句</span>. It turns out to be helpful because many relevant experts have raised similar proposals. Secondly, <span class="note">填第二个具体的建议，用简单句</span>. I believe that you will find this proposal helpful and useful.</p>
+        <p>Thank you so much for taking the time to read my letter. Doing some help to you is my original idea and give you my best wishes.</p>
+        <div class="closing">Yours sincerely,<br>Li Ming</div>
+      </div>
+      <details class="trans"><summary>中文翻译<span class="tr-arrow">▼</span></summary><div class="trans-body">
+        <p>在过去的三年里，我在多伦多大学主修应用物理。我写此信，是为了表达我对<span class="fill">______</span>的看法。</p>
+        <p>我的观点主要包括这两部分。第一点也是最重要的一点，<span class="fill">______</span>。事实证明，这是有帮助的，因为许多相关专家提出了类似的建议。第二，<span class="fill">______</span>。我相信你会觉得这个建议很有用。</p>
+        <p>非常感谢你花时间阅读我的来信。我最初的想法就是希望帮到你，希望你越来越好。</p>
+      </div></details>
+    </div></div>
+  </details>
+
+  <!-- 5 推荐信和介绍信 -->
+  <details class="card" id="x5">
+    <summary>
+      <span class="num">5</span>
+      <div class="titles"><h2>推荐信 &amp; 介绍信</h2><span class="sub">Recommendation / Introduction Letter</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <div class="letter">
+        <div class="salute">Dear Sir/Madam,</div>
+        <p>Studying at Tsinghua University, I act as the president of the Student Union. I am writing this letter to provide you with a formal recommendation / introduction on <span class="note">填推荐/介绍的主题，用名词或名词词组</span>.</p>
+        <p>The two major aspects of my recommendation/introduction can be seen below. At the beginning, <span class="note">填第一个推荐的理由/介绍的内容，用简单句</span>. It is said that special features of this issue have been made many a time by social media. Moreover, <span class="note">填第二个推荐的理由/介绍的内容，用简单句</span>, which really attracts me. I have also introduced it to my friends many times.</p>
+        <p>Your attention to my letter makes me feel grateful. Your quick reply to my letter would be highly appreciated by me.</p>
+        <div class="closing">Yours sincerely,<br>Li Ming</div>
+      </div>
+      <details class="trans"><summary>中文翻译<span class="tr-arrow">▼</span></summary><div class="trans-body">
+        <p>我就读于清华大学，任学生会主席。我写这封信是为了向你正式推荐／介绍<span class="fill">______</span>。</p>
+        <p>我的推荐／介绍有两个主要方面，如下文所示。首先，<span class="fill">______</span>。许多媒体对这个事情做过多次专门报道。此外，<span class="fill">______</span>，这确实很吸引我。我也多次把它介绍给我的朋友们。</p>
+        <p>你能读我的信，这让我充满感激之情。如果你能迅速答复我，我将不胜感激。</p>
+      </div></details>
+    </div></div>
+  </details>
+
+  <!-- 6 求职信和申请信 -->
+  <details class="card" id="x6">
+    <summary>
+      <span class="num">6</span>
+      <div class="titles"><h2>求职信 &amp; 申请信</h2><span class="sub">Application Letter</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <div class="letter">
+        <div class="salute">Dear Sir/Madam,</div>
+        <p>I have majored in English for three years since I enrolled at University of Oxford. I wish to take this opportunity to write to apply for <span class="note">填申请的主题，用名词或名词词组</span>.</p>
+        <p>I am ambitious to surpass all the rivals and be the final winner. First and foremost, I have learned many practical approaches, such as problem-solving and conflict-tackling. Furthermore, I really enjoy interacting with people and am ready to help others.</p>
+        <p>Thank you so much for taking the time to read my letter. Please write back and tell me your latest decision.</p>
+        <div class="closing">Yours sincerely,<br>Li Ming</div>
+      </div>
+      <details class="trans"><summary>中文翻译<span class="tr-arrow">▼</span></summary><div class="trans-body">
+        <p>自从我进入牛津大学以来，我已主修英文三年了。我借此机会写此信，是为了申请<span class="fill">______</span>。</p>
+        <p>我有信心超越所有的竞争对手并成为最后的获胜者。首先，我学到了很多实用的方法，比如如何解决问题和冲突。此外，我真的很喜欢与人交往，并且愿意帮助别人。</p>
+        <p>非常感谢你花时间阅读我的来信。请给我回信，告诉我你的最终决定。</p>
+      </div></details>
+    </div></div>
+  </details>
+
+  <!-- 7 询问信和请求信 -->
+  <details class="card" id="x7">
+    <summary>
+      <span class="num">7</span>
+      <div class="titles"><h2>询问信 &amp; 请求信</h2><span class="sub">Inquiry / Request Letter</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <div class="letter">
+        <div class="salute">Dear Sir/Madam,</div>
+        <p>I, excelling in organizing and majoring in international business, come from University of Birmingham. Regarding the issue I center on, I write this letter to request materials for <span class="note">填询问/请求的主题，用名词或动名词词组</span>.</p>
+        <p>In the first place, <span class="note">填第一个询问/请求的事项，用简单句</span>, which not only means a lot to me but also attracts me most. In addition, <span class="note">填第二个询问/请求的事项，用简单句</span>, which along with other important factors, contributes to my final decision. Lastly, if you could attach some detailed information in your reply, I would be deeply indebted to you.</p>
+        <p>It is my pleasure that you are willing to read my letter. Would you please kindly help to give me a reply soon? Thanks in advance.</p>
+        <div class="closing">Yours sincerely,<br>Li Ming</div>
+      </div>
+      <details class="trans"><summary>中文翻译<span class="tr-arrow">▼</span></summary><div class="trans-body">
+        <p>我来自伯明翰大学，主修国际商务，擅长组织活动。就我所关注的问题，我来信是为了获取<span class="fill">______</span>的资料。</p>
+        <p>首先，<span class="fill">______</span>，这不仅意义重大，而且最吸引我。除此之外，<span class="fill">______</span>和其他重要因素一起，促成了我的最终决定。如果你能在回信中附上一些详细的信息，我将感激不尽。</p>
+        <p>我很高兴您愿意读我的信。请您尽快给我答复好吗？谢谢。</p>
+      </div></details>
+    </div></div>
+  </details>
+
+  <!-- 8 邀请信 -->
+  <details class="card" id="x8">
+    <summary>
+      <span class="num">8</span>
+      <div class="titles"><h2>邀请信</h2><span class="sub">Invitation Letter</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <div class="letter">
+        <div class="salute">Dear Sir/Madam,</div>
+        <p>Four years ago, I got the admission to the University of Washington, majoring in plant protection. It is my great honor to write this letter to invite you to attend <span class="note">填活动名称，或活动名称+被邀请者要做的事，用名词性词</span>.</p>
+        <p>To attend the activity, you shall know relevant important details ahead of schedule. Firstly, the activity is supposed to begin at 7 p.m. on Wednesday night and the lecture hall of the main building is where you will go. Secondly, the activity is more appealing with the presence of a mysterious guest and his enlightening speech. Finally, we have designed a 15-minute Q&amp;A interactive session for the audience after the activity.</p>
+        <p>I couldn't thank you so much for reading my letter any more. I am looking forward to seeing you with the greatest sincerity.</p>
+        <div class="closing">Yours sincerely,<br>Li Ming</div>
+      </div>
+      <details class="trans"><summary>中文翻译<span class="tr-arrow">▼</span></summary><div class="trans-body">
+        <p>四年前，我被华盛顿大学录取，主修植物保护。我很荣幸写这封信邀请您出席<span class="fill">______</span>。</p>
+        <p>为参加活动起见，你应提前知道有关的重要细节。首先，活动定于周三晚上 8 点开始，地点在主楼的大会议室。其次，一位神秘客人的出席和由其带来的启发性演讲将使本次活动更具吸引力。最后，我们在活动末尾为观众设计了一个 15 分钟的问答互动环节。</p>
+        <p>您愿意读我的信，我的感激简直无法言喻。我真诚地期待您的到来。</p>
+      </div></details>
+    </div></div>
+  </details>
+
+  <!-- 9 投诉信 -->
+  <details class="card" id="x9">
+    <summary>
+      <span class="num">9</span>
+      <div class="titles"><h2>投诉信</h2><span class="sub">Complaint Letter</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <div class="letter">
+        <div class="salute">Dear Sir/Madam,</div>
+        <p>I am a senior student, majoring in Chinese at the South University of China. To complain about <span class="note">填投诉事项，用名词性词组</span>, I am writing this letter to seek for help.</p>
+        <p>As is shown below, I am really annoyed about the two sides. First and most important, <span class="note">填第一个投诉原因，用简单句</span>, for which I suffered much more trouble. Furthermore, I felt angrier at the fact that no one answered the phone whenever I called the service hotline. Given the issues in question, it is desirable that you find an appropriate coping way for me. <span class="note">如考题要求写具体解决方案，则需改写此句</span></p>
+        <p>I feel deeply indebted to you for your kindness in reading my letter. I hope you can answer my letter as soon as the result comes out.</p>
+        <div class="closing">Yours sincerely,<br>Li Ming</div>
+      </div>
+      <details class="trans"><summary>中文翻译<span class="tr-arrow">▼</span></summary><div class="trans-body">
+        <p>我是一名大四学生，在中国南方大学主修中文。我写这封信是想投诉<span class="fill">______</span>并向您寻求帮助。</p>
+        <p>如下所述，我对两方面都很恼火。第一并且最重要的一点是<span class="fill">______</span>，由此我遭受了更多的麻烦。此外，我每次拨打服务热线都没有人接，这让我更愤怒了。希望您能为我找到上述问题的合适的处理方式。</p>
+        <p>你读我的信，我深深感激。我希望结果一出来，你就能给我回信。</p>
+      </div></details>
+    </div></div>
+  </details>
+
+  <!-- 10 通知 -->
+  <details class="card" id="x10">
+    <summary>
+      <span class="num">10</span>
+      <div class="titles"><h2>通知</h2><span class="sub">Notice</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <div class="letter">
+        <div class="salute">Notice</div>
+        <p><span class="note">填活动名称，用名词词组</span> is scheduled to start at 7:30 p.m. on Monday night and you may go to the meeting hall of the main building of Peking University to attend it. This notice will inform you of some essential information regarding the activity.</p>
+        <p>First and most important, <span class="note">填第一个重要信息，用简单句</span>, which is the most important and noticeable thing to you. One more thing, a special guest will show up and give an address to the audience during the activity. At last, for a perfect end, we will spare 15 minutes to exchange our ideas among the participants.</p>
+        <p>We are eager for your coming, waiting for your attendance. Whatever details you want to know about the activity, you are welcome to consult our school's official website.</p>
+        <div class="closing">The Students' Union</div>
+      </div>
+      <details class="trans"><summary>中文翻译<span class="tr-arrow">▼</span></summary><div class="trans-body">
+        <p><span class="fill">______</span>将在本周五晚上 7:30 举行，届时您可前往北京大学主楼会议厅参加。您可以通过本通知了解本次活动的一些基本信息。</p>
+        <p>首先，<span class="fill">______</span>，这对你来说是最重要和最值得注意的事情。另外，一位特殊的客人将会莅临活动现场，并给观众带来一次演讲。最后，我们将抽出 15 分钟的时间来交流想法，为本次活动画上一个完美的句号。</p>
+        <p>我们热切盼望你们的到来和参与。欢迎访问我们学校的官网，了解本次活动的细节。</p>
+      </div></details>
+    </div></div>
+  </details>
+
+  <!-- 11 会议纪要 -->
+  <details class="card" id="x11">
+    <summary>
+      <span class="num">11</span>
+      <div class="titles"><h2>会议纪要</h2><span class="sub">Meeting Summary</span></div>
+      <svg class="arrow" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="body"><div class="inner">
+      <div class="steps">
+        <b>思路：</b>会议／对谈纪要 = 通知、邀请信的「过去式」。通知／邀请信描述将来要发生的事，纪要描述已经发生的会议的信息点。
+        <ol>
+          <li><b>第一段：</b>时间、地点、大体内容、参加人员</li>
+          <li><b>第二段：</b>① 会议开始时间与开场活动 → ② 流程一 → ③ 流程二 → ④ 流程三</li>
+          <li><b>第三段：</b>会议结束 + 备份</li>
+        </ol>
+      </div>
+      <div class="callout">示例题干：Suppose you have attended a meeting held by your student union to welcome some international students. Please write a summary about this meeting.</div>
+      <div class="letter">
+        <div class="salute">Meeting Summary</div>
+        <p>On January 1, 2025 <span class="note">时间</span>, our Student Union <span class="note">主办方</span> organized a meeting for <span class="note">填写目的或对象</span>. It took place at <span class="note">地点</span>.</p>
+        <p>The meeting started at 9 a.m <span class="note">时间</span>, and the president of our union <span class="note">主办方</span> delivered a short speech to extend our warm welcome to <span class="note">对象</span>. Then, the head of the activity department gave a presentation, introducing the campus, the main facilities, and various activities. After that, all the participants <span class="note">做具体的事情</span>. At the end of the meeting, the Student Union <span class="note">主办方</span> summarized all items and decisions.</p>
+        <p>The meeting was adjourned at 11 a.m. as scheduled, and the meeting had been recorded and the link was shared via our website/Wechat group.</p>
+        <div class="closing">Submitted by: ______<br>Date: ______</div>
+      </div>
+      <details class="trans"><summary>中文翻译<span class="tr-arrow">▼</span></summary><div class="trans-body">
+        <p>2025 年一月一日，我校学生会为了<span class="fill">______</span>举办了一个会议。该会议在<span class="fill">______</span>举办。</p>
+        <p>这场会议开始于上午九点，在学生活动中心，我们学生会的主席发表了一个简短的讲话以欢迎（对象）。随后，活动部门的负责人进行了介绍，介绍了校园、主要设施和各种活动，之后，所有参加活动的人做了（做具体的事情）。最后，主办方总结了这次会议的所有项目和决议。会议在上午十一点如期结束，会议已被记录并且通过网站或微信群分享。</p>
+        <p>提交人：李明<br>日期：______</p>
+      </div></details>
+      <div class="callout" style="margin-top:12px">⚠️ 注意事项：活动主题、对象、时间要对应改正确；活动流程可根据题目要求替换成更具体的流程。</div>
+    </div></div>
+  </details>
+
+  <footer>
+    <div class="cheer">坚持难能可贵，考研 er 加油啊！！！</div>
+    由《小作文模板.pdf》整理 · 仅供复习使用
+  </footer>
+</main>
+
+<button class="fab" id="fab" title="返回顶部">↑</button>
+
+<script>
+(function(){
+  var sections = document.querySelectorAll('details.card');
+  var chips = document.getElementById('chips');
+  var toggleAll = document.getElementById('toggleAll');
+  var fab = document.getElementById('fab');
+  var expanded = false;
+
+  var names = ['感谢信','祝贺信','道歉/辞职信','建议信','推荐/介绍信','求职/申请信','询问/请求信','邀请信','投诉信','通知','会议纪要'];
+  sections.forEach(function(sec, i){
+    var c = document.createElement('span');
+    c.className = 'chip';
+    c.textContent = (i+1) + '. ' + names[i];
+    c.addEventListener('click', function(){
+      sec.open = true;
+      sec.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+    chips.appendChild(c);
+  });
+
+  toggleAll.addEventListener('click', function(){
+    expanded = !expanded;
+    sections.forEach(function(s){ s.open = expanded; });
+    toggleAll.textContent = expanded ? '收起全部' : '展开全部';
+  });
+
+  fab.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+  window.addEventListener('scroll', function(){ fab.style.display = window.scrollY > 500 ? 'flex' : 'none'; });
+  fab.style.display = 'none';
+
+  var chipEls = Array.prototype.slice.call(chips.children);
+  function spy(){
+    var pos = window.scrollY + 120, idx = 0;
+    sections.forEach(function(s, i){ if (s.offsetTop <= pos) idx = i; });
+    chipEls.forEach(function(c, i){ c.classList.toggle('active', i === idx); });
+  }
+  window.addEventListener('scroll', spy);
+  spy();
+})();
+</script>
+</body>
+</html>
